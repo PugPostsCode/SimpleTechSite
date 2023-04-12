@@ -1,0 +1,509 @@
+@charset "utf-8";
+
+/*
+
+Colour Palette:
+
+	text: #aa8888,
+	background: #0a0808,
+	header: #f7c6c6,
+	buttons: #786060,
+	links: #f77c7c, #b95c5c
+	navigation: #ffcccc, #554444
+
+*/
+
+/* Universal style */
+html {
+	background-color: #0a0808;
+
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+
+	margin: 0;
+}
+
+/* Nav Bar Style*/
+.main_nav {
+	display: flex;
+
+    align-items: center;
+
+    list-style: none;
+
+    background-color: #ffcccc;
+
+    padding: 0.3em;
+
+	margin: 0 auto;
+    max-width: 1532px;
+}
+
+.main_nav a {
+    color: #554444;
+
+    padding: 10px 40px;
+
+    text-decoration: none;
+}
+
+.main_nav a:hover {
+    background-color: #554444;
+	color: #ffcccc;
+}
+
+li.logo {
+	margin-left: auto;
+}
+
+/* Hero Image */
+/* index.html */
+.ind_hero_img {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(10, 8, 8, 0.5)), url(images/heroes/simple.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: relative;
+    height: 500px; /* how to dynamicise?????? */
+
+	margin: 0 auto;
+    max-width: 1532px;
+}
+
+/* store.html */
+.str_hero_img {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(10, 8, 8, 0.5)), url(images/heroes/impersonator.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: relative;
+    height: 500px; /* how to dynamicise?????? */
+
+	margin: 0 auto;
+    max-width: 1532px;
+}
+
+/* Hero Header */
+.hero_title {
+    color: #a88;
+
+    text-shadow: 0.05em 0.05em 0.1em #0a0808;
+    text-align: center;
+
+    font-size: 3em;
+
+    position: absolute;
+    top: 75%;
+	margin: 20px;
+
+	margin: 0 auto;
+    max-width: 1532px;
+}
+
+/* adaptive flexbox gallery thing */
+#flexthing {
+	display: flex;
+
+	flex-wrap: wrap;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+#flexthing div {
+	padding: 20px;
+}
+
+/* Grid Stufffffffffffffff */
+/* index.html */
+#index_con {
+	display: grid;
+
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto 32 auto;
+	grid-template-areas:
+		"ft ft"
+		"tm mis"
+		"in_sp1 in_sp1"
+		"wis hq"
+	;
+}
+
+#flexthing {
+	grid-area: ft;
+}
+
+#flexthing {
+	background-color: #a88;
+	
+	text-align: center;
+
+	border: #f7c6c6 solid;
+
+	padding: 20px;
+}
+
+#mission {
+	grid-area: mis;
+}
+
+#team {
+	grid-area: tm;
+}
+
+#in_sp1 {
+	grid-area: in_sp1;
+}
+
+#wis {
+	grid-area: wis;
+}
+
+#headquarters {
+	grid-area: hq;
+}
+
+#misson, #wis {
+	padding: 20px;
+}
+
+#team, #headquarters, #in_sp1 {
+	text-align: center;
+
+	padding: 20px;
+}
+
+/* store.html */
+#store_con {
+	display: grid;
+
+	grid-template-columns: 0.5fr 1fr 1fr;
+	grid-template-rows: auto auto auto;
+	grid-template-areas:
+		"more gm1 gm2"
+		"more gm3 gm4"
+		"more gm5 gm6"
+	;
+}
+
+#gm1 {
+	grid-area: gm1;
+}
+
+#gm2 {
+	grid-area: gm2;
+}
+
+#gm3 {
+	grid-area: gm3;
+}
+
+#gm4 {
+	grid-area: gm4;
+}
+
+#gm5 {
+	grid-area: gm5;
+}
+
+#gm6 {
+	grid-area: gm6;
+}
+
+#more {
+	grid-area: more;
+}
+
+#gm1, #gm2, #gm3, #gm4, #gm5, #gm6 {
+	text-align: center;
+}
+
+#gm1, #gm2, #gm3, #gm4, #gm5, #gm6, #more {
+	border: solid #554444 2px;
+	
+	padding: 20px;
+}
+
+#store_con * img {
+	border: #ffcccc solid;
+
+	background-color: #a88;
+}
+
+/* information.html */
+#info_con {
+	display: grid;
+
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 32 auto auto auto;
+	grid-template-areas:
+		"if_sp1 if_sp1"
+		"dnlg work"
+		"why ungm"
+		"cont cont"
+	;
+}
+
+#if_sp1 {
+	grid-area: if_sp1;
+}
+
+#dnlg {
+	grid-area: dnlg;
+}
+
+#work {
+	grid-area: work;
+}
+
+#ungm {
+	grid-area: ungm;
+}
+
+#why {
+	grid-area: why;
+}
+
+#cont {
+	grid-area: cont;
+}
+
+#work, #why, #cont, #dnlg, #ungm, #if_sp1 {
+	padding: 20px;
+}
+
+#dnlg, #ungm, #if_sp1 {
+	text-align: center;
+}
+
+/* develop.html */
+#develop_con {
+	display: grid;
+	
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto auto auto auto;
+	grid-template-areas:
+		"cons htd htd htd"
+		"dsph dsph sksp sksp"
+		"cmds cmds spgs spgs"
+		"cndv cndv cndv cndv"
+	;
+}
+
+#cons {
+	grid-area: cons;
+
+	border-top: solid #554444 4px;
+	border-bottom: solid #554444 2px;
+}
+
+#htd {
+	grid-area: htd;
+
+	border-top: solid #554444 4px;
+	border-bottom: solid #554444 2px;
+}
+
+#dsph { /* design philosophy */
+	grid-area: dsph;
+
+	border-top: solid #554444 2px;
+	border-right: solid #554444 2px;
+}
+
+#sksp { /* simplekid specifications */
+	grid-area: sksp;
+
+	border-top: solid #554444 2px;
+	border-left: solid #554444 2px;
+}
+
+#cmds { /* command prompt imaeg */
+	grid-area: cmds;
+
+	border-right: solid #554444 2px;
+	border-bottom: solid #554444 4px;
+}
+
+#spgs { /* addition program imaeg */
+	grid-area: spgs;
+
+	border-left: solid #554444 2px;
+	border-bottom: solid #554444 4px;
+}
+
+#cont_dev {
+	grid-area: cndv;
+}
+
+#cons, #dsph, #sksp, #cmds, #spgs {
+	text-align: center; /* Why table no center??????? */
+}
+
+#cons, #htd, #dsph, #sksp, #cmds, #spgs, #cont_dev {
+	padding: 20px;
+}
+
+/* Body Style */
+main {
+	background-color: #0a0808;
+	color: #a88;
+
+	font-family: Arial, Helvetica, sans-serif;
+
+	margin: 0 auto;
+    max-width: 1532px;
+}
+
+h1, h2, h3, h4, caption {
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+a, em {
+	color: #f77c7c;
+}
+
+a:hover {
+	color: #b95c5c;
+}
+
+img {
+	max-width: 100%;
+}
+
+button {
+	background-color: #786060;
+	color: #0a0808;
+}
+
+button:hover {
+	background-color: #0a0808;
+	color: #786060;
+}
+
+table, th, td {
+	border: 1px solid #554444;
+}
+
+footer {
+	background-color: #f7c6c6;
+	color: #0a0808;
+
+	text-align: center;
+
+	padding: 20px;
+
+	margin: 0 auto;
+    max-width: 1532px;
+}
+
+/* Media Queries */
+/* Tablet */
+@media screen and (max-width: 1024px) {
+	/* Grid */
+	/* index.html */
+	#index_con {
+		display: grid;
+	
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto auto 32 auto;
+		grid-template-areas:
+			"ft ft"
+			"tm mis"
+			"in_sp1 in_sp1"
+			"wis hq"
+		;
+	}
+
+	/* develop.html */
+	#develop_con {
+		display: grid;
+		
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto auto auto auto;
+		grid-template-areas:
+			"cons htd"
+			"dsph sksp"
+			"cmds spgs"
+			"cndv cndv"
+		;
+	}
+}
+
+/* Phone */
+@media screen and (max-width: 640px) {
+	/* Grid */
+	/* index.html */
+	#index_con {
+		display: grid;
+	
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto 32 auto auto;
+		grid-template-areas:
+			"ft"
+			"mis"
+			"tm"
+			"in_sp1"
+			"hq"
+			"wis"
+		;
+	}
+
+	/* store.html */
+	#store_con {
+		display: grid;
+
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto auto auto auto auto;
+		grid-template-areas:
+			"gm1"
+			"gm2"
+			"gm3"
+			"gm4"
+			"gm5"
+			"gm6"
+			"more"
+		;
+	}
+
+	/* information.html */
+	#info_con {
+		display: grid;
+
+		grid-template-columns: 1fr;
+		grid-template-rows: 32 auto auto auto auto auto;
+		grid-template-areas:
+			"if_sp1"
+			"work"
+			"dnlg"
+			"why"
+			"ungm"
+			"cont"
+		;
+	}
+
+	/* develop.html */
+	#develop_con {
+		display: grid;
+		
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto auto auto auto auto;
+		grid-template-areas:
+			"cons"
+			"htd"
+			"dsph"
+			"cmds"
+			"sksp"
+			"spgs"
+			"cndv"
+		;
+	}
+}
