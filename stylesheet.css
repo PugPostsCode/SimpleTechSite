@@ -117,7 +117,9 @@ li.logo {
 }
 
 #flexthing div {
-	padding: 20px;
+	padding: 10px;
+
+	max-width: 192px;
 }
 
 /* Grid Stufffffffffffffff */
@@ -169,8 +171,10 @@ li.logo {
 	grid-area: hq;
 }
 
-#misson, #wis {
+#mission, #wis {
 	padding: 20px;
+
+	margin: 0.5em;
 }
 
 #team, #headquarters, #in_sp1 {
