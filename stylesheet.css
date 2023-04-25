@@ -15,7 +15,7 @@ Colour Palette:
 
 /* Universal style */
 html {
-	background-color: #0a0808;
+	background-color: #554444;
 
     box-sizing: border-box;
 }
@@ -35,6 +35,9 @@ html {
     list-style: none;
 
     background-color: #ffcccc;
+
+	font-family: 'Courier New', Courier, monospace;
+	font-weight: bold;
 
     padding: 0.3em;
 
@@ -101,7 +104,7 @@ li.logo {
     top: 75%;
 	margin: 20px;
 
-	margin: 0 auto;
+	margin: 10 auto;
     max-width: 1532px;
 }
 
@@ -401,6 +404,7 @@ footer {
 	background-color: #f7c6c6;
 	color: #0a0808;
 
+	font-family: Arial, Helvetica, sans-serif;
 	text-align: center;
 
 	padding: 20px;
@@ -412,6 +416,15 @@ footer {
 /* Media Queries */
 /* Tablet */
 @media screen and (max-width: 1024px) {
+	/* Navigation Bar */
+	.main_nav a {
+		color: #554444;
+	
+		padding: 10px 20px;
+	
+		text-decoration: none;
+	}
+
 	/* Grid */
 	/* index.html */
 	#index_con {
@@ -424,6 +437,36 @@ footer {
 			"tm mis"
 			"in_sp1 in_sp1"
 			"wis hq"
+		;
+	}
+
+	/* store.html */
+	#store_con {
+		display: grid;
+
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto auto auto auto;
+		grid-template-areas:
+			"gm1 gm2"
+			"gm3 gm4"
+			"gm5 gm6"
+			"more more"
+		;
+	}
+
+	/* information.html */
+	#info_con {
+		display: grid;
+
+		grid-template-columns: 1fr;
+		grid-template-rows: 32 auto auto auto auto auto;
+		grid-template-areas:
+			"if_sp1"
+			"work"
+			"dnlg"
+			"why"
+			"ungm"
+			"cont"
 		;
 	}
 
@@ -444,6 +487,15 @@ footer {
 
 /* Phone */
 @media screen and (max-width: 640px) {
+	/* Navigation Bar */
+	.main_nav a {
+		color: #554444;
+	
+		padding: 10px 10px;
+	
+		text-decoration: none;
+	}
+
 	/* Grid */
 	/* index.html */
 	#index_con {
@@ -509,5 +561,36 @@ footer {
 			"spgs"
 			"cndv"
 		;
+	}
+
+	#cons {
+		grid-area: cons;
+	
+		border-top: solid #554444 4px;
+	}
+	
+	#htd {
+		grid-area: htd;
+	
+		border-top: solid #554444 4px;
+	}
+	
+	#dsph { /* design philosophy */
+		grid-area: dsph;
+	
+		border-top: solid #554444 2px;
+	}
+	
+	#sksp { /* simplekid specifications */
+		grid-area: sksp;
+	
+		border-top: solid #554444 2px;
+	}
+
+	#cont_dev {
+		grid-area: cndv;
+
+		border-top: solid #554444 2px;
+		border-bottom: solid #554444 2px;
 	}
 }
