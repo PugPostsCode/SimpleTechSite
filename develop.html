@@ -10,6 +10,9 @@
 		
 		<link rel="stylesheet" href="stylesheet.css">
 
+		<!-- External JS -->
+        <script src="javascript.js"></script>
+
 		<title>
 			SimpleTech Development
 		</title>
@@ -142,7 +145,25 @@
 					</p>
 
 					<!-- Form -->
-					
+					<h4>
+						Contact Us Straight from this Website!
+					</h4>
+
+					<form>
+						Your name: <input type="text" name="name"><br>
+						Your email:&ensp;<input type="text" name="email"><br>
+
+						Why are you emailing?:<br>
+						<select name="why">
+							<option value="none"> --Select an Option-- </option>
+							<option value="game"> Submitting a Game for Review </option>
+							<option value="job"> Applying for a Job at SimpleTech </option>
+							<option value="info"> Inquiring for more Information </option>
+						</select><br><br>
+
+						<input type="submit" value="Submit Form" onClick="formSubmitted()">
+						<input type="reset" value="Reset Form">
+					</form>
 				</div>
 
 			</div>

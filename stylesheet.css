@@ -6,7 +6,7 @@ Colour Palette:
 
 	text: #aa8888,
 	background: #0a0808,
-	header: #f7c6c6,
+	header: #ffcccc,
 	buttons: #786060,
 	links: #f77c7c, #b95c5c
 	navigation: #ffcccc, #554444
@@ -365,6 +365,21 @@ li.logo {
 
 #cons, #htd, #dsph, #sksp, #cmds, #spgs, #cont_dev {
 	padding: 20px;
+}
+
+/* Form Style */
+input, select {
+	background-color: #554444;
+	color: #ffcccc;
+
+	margin: 0.25em 0;
+
+	border: none;
+	border-bottom: #ffcccc solid 1px;
+}
+
+input[type=text] {
+	width: 24em;
 }
 
 /* Body Style */
