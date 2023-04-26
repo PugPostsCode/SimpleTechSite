@@ -66,54 +66,31 @@ li.logo {
 /* index.html */
 .ind_hero_img {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(10, 8, 8, 1)), url(images/heroes/simple.png);
+}
+
+/* store.html */
+.str_hero_img {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(10, 8, 8, 1)), url(images/heroes/impersonator.png);
+}
+
+/* information.html */
+.inf_hero_img {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(10, 8, 8, 1)), url(images/heroes/bagachu.png);
+}
+
+/* develop.html */
+.dev_hero_img {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(10, 8, 8, 1)), url(images/heroes/spriteEditor.png);
+}
+
+/* all of them lol why didn't i just do this the first time */
+.ind_hero_img, .str_hero_img, .inf_hero_img, .dev_hero_img {
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
 
     position: relative;
     height: 500px; /* how to dynamicise?????? */
-
-	margin: 0 auto;
-    max-width: 1532px;
-}
-
-/* store.html */
-.str_hero_img {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(10, 8, 8, 1)), url(images/heroes/impersonator.png);
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    position: relative;
-    height: 500px;
-
-	margin: 0 auto;
-    max-width: 1532px;
-}
-
-/* information.html */
-.inf_hero_img {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(10, 8, 8, 1)), url(images/heroes/bagachu.png);
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    position: relative;
-    height: 500px;
-
-	margin: 0 auto;
-    max-width: 1532px;
-}
-
-/* develop.html */
-.dev_hero_img {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(10, 8, 8, 1)), url(images/heroes/spriteEditor.png);
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    position: relative;
-    height: 500px;
 
 	margin: 0 auto;
     max-width: 1532px;
@@ -634,6 +611,12 @@ footer {
 
 @media screen and (max-width: 640px) {
 	/* Hero Image */
+	/* index.html */
+	.ind_hero_img {
+		background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(10, 8, 8, 1)), url(images/heroes/simple_smallScreen.png);
+	}
+
+	/* Hero Header */
 	.hero_title {
 		top: 60%;
 	}
