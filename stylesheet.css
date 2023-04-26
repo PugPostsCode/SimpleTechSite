@@ -155,7 +155,7 @@ li.logo {
 	
 	text-align: center;
 
-	border: #f7c6c6 solid;
+	border: #ffcccc solid;
 
 	padding: 20px;
 }
@@ -379,7 +379,7 @@ input, select {
 }
 
 input[type=text] {
-	width: 24em;
+	width: 24rem;
 }
 
 /* Body Style */
@@ -412,22 +412,52 @@ img {
 	max-width: 100%;
 }
 
-button {
-	background-color: #f7c6c6;
+button, .storeButton {
+	background-color: #ffcccc;
 	color: #0a0808;
+
+	text-decoration: none;
+
+	margin: 5px 0;
+	padding: 0.5em 1em;
+
+	border: #0a0808 solid 2px;
 }
 
-button:hover {
+button:hover, .storeButton:hover {
 	background-color: #0a0808;
-	color: #f7c6c6;
+	color: #ffcccc;
+
+	text-decoration: none;
+
+	border: #ffcccc solid 2px;
 }
+
+/*
+	ok so this is super bodged, but essentially we set the font-size
+	in the flexthing's div to be 1.5rem so that the spacing between the
+	buttons and the icons are correct, then shrink it to 0.75rem for the
+	"buttons" to make their text the right size. there are totally better
+	ways to do this, but the margins weren't working for seemingly no
+	reason so this is the best i got lol.
+*/
+#flexthing div {
+	font-size: 1.5rem;
+}
+
+.storeButton {
+	font-size: 0.75rem;
+
+	margin: 1000em 0;
+}
+/**/
 
 table, th, td {
 	border: 1px solid #554444;
 }
 
 footer {
-	background-color: #f7c6c6;
+	background-color: #ffcccc;
 	color: #0a0808;
 
 	font-family: 'Courier New', Courier, monospace;
