@@ -529,6 +529,10 @@ footer {
 		;
 	}
 
+	#dnlg {
+		border: none;
+	}
+
 	/* develop.html */
 	#develop_con {
 		display: grid;
@@ -546,6 +550,11 @@ footer {
 
 /* Phone */
 @media screen and (max-width: 768px) {
+	/* Form */
+	input[type=text] {
+		width: 12rem;
+	}
+
 	/* Navigation Bar */
 	.main_nav a {
 		color: #554444;
