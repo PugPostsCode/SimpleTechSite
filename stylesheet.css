@@ -62,10 +62,10 @@ li.logo {
 	margin-left: auto;
 }
 
-/* Hero Image */
+/* Hero Image -- add one for each site */
 /* index.html */
 .ind_hero_img {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(10, 8, 8, 0.5)), url(images/heroes/simple.png);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(10, 8, 8, 1)), url(images/heroes/simple.png);
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -79,13 +79,41 @@ li.logo {
 
 /* store.html */
 .str_hero_img {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(10, 8, 8, 0.5)), url(images/heroes/impersonator.png);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(10, 8, 8, 1)), url(images/heroes/impersonator.png);
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
 
     position: relative;
-    height: 500px; /* how to dynamicise?????? */
+    height: 500px;
+
+	margin: 0 auto;
+    max-width: 1532px;
+}
+
+/* information.html */
+.inf_hero_img {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(10, 8, 8, 1)), url(images/heroes/bagachu.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: relative;
+    height: 500px;
+
+	margin: 0 auto;
+    max-width: 1532px;
+}
+
+/* develop.html */
+.dev_hero_img {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(10, 8, 8, 1)), url(images/heroes/spriteEditor.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: relative;
+    height: 500px;
 
 	margin: 0 auto;
     max-width: 1532px;
@@ -100,11 +128,12 @@ li.logo {
 
     font-size: 3em;
 
+	padding: 0 0.5em;
+
     position: absolute;
     top: 75%;
-	margin: 20px;
 
-	margin: 10 auto;
+	margin: 0 auto;
     max-width: 1532px;
 }
 
@@ -250,8 +279,8 @@ li.logo {
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 32 auto auto auto;
 	grid-template-areas:
-		"if_sp1 if_sp1"
 		"dnlg work"
+		"if_sp1 if_sp1"
 		"why ungm"
 		"cont cont"
 	;
@@ -263,10 +292,14 @@ li.logo {
 
 #dnlg {
 	grid-area: dnlg;
+
+	border-top: #554444 solid 4px;
 }
 
 #work {
 	grid-area: work;
+
+	border-top: #554444 solid 4px;
 }
 
 #ungm {
@@ -363,6 +396,7 @@ main {
 	color: #a88;
 
 	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1rem;
 
 	margin: 0 auto;
     max-width: 1532px;
@@ -370,7 +404,7 @@ main {
 
 h1, h2, h3, h4, caption {
 	font-family: 'Courier New', Courier, monospace;
-	font-size: 2em;
+	font-size: 2rem;
 	font-weight: bold;
 }
 
@@ -387,13 +421,13 @@ img {
 }
 
 button {
-	background-color: #786060;
+	background-color: #f7c6c6;
 	color: #0a0808;
 }
 
 button:hover {
 	background-color: #0a0808;
-	color: #786060;
+	color: #f7c6c6;
 }
 
 table, th, td {
@@ -404,7 +438,8 @@ footer {
 	background-color: #f7c6c6;
 	color: #0a0808;
 
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Courier New', Courier, monospace;
+	font-weight: bold;
 	text-align: center;
 
 	padding: 20px;
@@ -430,13 +465,15 @@ footer {
 	#index_con {
 		display: grid;
 	
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: auto auto 32 auto;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto 32 auto auto;
 		grid-template-areas:
-			"ft ft"
-			"tm mis"
-			"in_sp1 in_sp1"
-			"wis hq"
+			"ft"
+			"mis"
+			"tm"
+			"in_sp1"
+			"hq"
+			"wis"
 		;
 	}
 
@@ -461,9 +498,9 @@ footer {
 		grid-template-columns: 1fr;
 		grid-template-rows: 32 auto auto auto auto auto;
 		grid-template-areas:
-			"if_sp1"
 			"work"
 			"dnlg"
+			"if_sp1"
 			"why"
 			"ungm"
 			"cont"
@@ -486,7 +523,7 @@ footer {
 }
 
 /* Phone */
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
 	/* Navigation Bar */
 	.main_nav a {
 		color: #554444;
@@ -537,9 +574,9 @@ footer {
 		grid-template-columns: 1fr;
 		grid-template-rows: 32 auto auto auto auto auto;
 		grid-template-areas:
-			"if_sp1"
 			"work"
 			"dnlg"
+			"if_sp1"
 			"why"
 			"ungm"
 			"cont"
@@ -592,5 +629,12 @@ footer {
 
 		border-top: solid #554444 2px;
 		border-bottom: solid #554444 2px;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	/* Hero Image */
+	.hero_title {
+		top: 60%;
 	}
 }
